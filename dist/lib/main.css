@@ -1,12 +1,64 @@
+body {
+  background-color: rgba(48, 48, 48, 1);
+}
+
 .Header {
-  background-color: black;
-  background-size: 100vw 56px;
+  background-color: rgba(24, 24, 24, 1);
   width: 100vw;
   height: 56px;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: inherit;
+}
+
+.MainContainer {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: auto auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: inherit;
+}
+
+.EditorContainer {
+  background-color: rgba(32, 32, 32, 1);
+  position: relative;
+  margin: 96px 8px 40px 96px;
+  border-radius: 24px 0 0 24px;
+  box-shadow: -2px 2px 16px rgba(0, 0, 0, 0.64);
+  z-index: inherit;
+}
+
+.EditorHeaderView {
+  background-color: rgba(24, 24, 24, 1);
+  height: 56px;
+  position: relative;
+  margin-left: 0;
+  margin-right: 0;
+  border-radius: 24px 0 0 0;
+  z-index: inherit;
+}
+
+.ResultContainer {
+  background-color: rgba(96, 96, 96, 1);
+  position: relative;
+  margin: 96px 96px 40px 8px;
+  border-radius: 0 24px 24px 0;
+  box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.64);
+  z-index: inherit;
+}
+
+.SeparatorView {
+  background-color: rgba(240, 192, 48, 1);
+  height: 1px;
+  position: relative;
+  top: 55px;
+  margin-left: 0;
+  margin-right: 0;
+  z-index: inherit;
 }
 
 .MainText {
@@ -18,51 +70,5 @@
   position: absolute;
   top: 16px;
   left: 24px;
-  z-index: 0;
-}
-
-.AuthorText {
-  height: 16px;
-  color: rgba(240, 192, 48, 1);
-  font-weight: bold;
-  font-size: 16px;
-  font-family: 'Times New Roman', Times, serif;
-  position: absolute;
-  top: 20px;
-  right: 24px;
-  z-index: 0;
-}
-
-.MainContainer {
-  background-size: 100vw 100vh;
-  width: 100vw;
-  height: 100vh;
-  display: grid;
-  grid-template-columns: auto auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
-}
-
-.EditorContainer {
-  position: relative;
-  margin: 96px 8px 40px 96px;
-  border-style: solid;
-  border-width: 4px;
-  border-color: rgba(240, 192, 48, 1);
-  border-radius: 24px 0 0 24px;
-  box-shadow: -2px 2px 16px rgba(0, 0, 0, 0.32);
-  z-index: inherit;
-}
-
-.ResultContainer {
-  position: relative;
-  margin: 96px 96px 40px 8px;
-  border-style: solid;
-  border-width: 4px;
-  border-color: rgba(240, 192, 48, 1);
-  border-radius: 0 24px 24px 0;
-  box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.32);
   z-index: inherit;
 }
