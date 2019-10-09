@@ -9,7 +9,7 @@ console.log = function(value) {
   return value
 }
 
-const editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
+const editor = CodeMirror.fromTextArea(document.getElementById('editor'), {
   lineNumbers: true,
   mode: 'ragnakode',
   lineWrapping: true
@@ -17,12 +17,18 @@ const editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
 
 window.compileAndRun = function() {
   const code = editor.getValue()
+  let output = ''
 
-  const tokens = Lexer.tokenize(code)
-  const { ast, symbolTable } = Parser.parse(tokens)
-  SemanticAnalyser.analyze(ast, symbolTable)
-  const outputFileData = CodeGenerator.generate(ast, symbolTable)
+  try {
+    const tokens = Lexer.tokenize(code)
+    const { ast, symbolTable } = Parser.parse(tokens)
+    SemanticAnalyser.analyze(ast, symbolTable)
+    const outputFileData = CodeGenerator.generate(ast, symbolTable)
 
-  const output = eval(outputFileData)
-  console.log(typeof output)
+    output = eval(outputFileData)
+  } catch (error) {
+    output = console.log(error)
+  }
+  
+  document.querySelector('#console').value = output
 }
