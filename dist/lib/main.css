@@ -1,7 +1,34 @@
 .Header {
-  margin: 0;
-  width: 100vw;
-  height: 48px;
   background-color: black;
-  color: white
+  background-size: 100vw 56px;
+  width: 100vw;
+  height: 56px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.MainText {
+  height: 24px;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  font-family: 'Times New Roman', Times, serif;
+  position: absolute;
+  top: 16px;
+  left: 24px;
+  z-index: 0;
+}
+
+.AuthorText {
+  height: 16px;
+  color: rgba(240, 192, 48, 1);
+  font-weight: bold;
+  font-size: 16px;
+  font-family: 'Times New Roman', Times, serif;
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  z-index: 0;
 }
