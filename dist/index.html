@@ -15,17 +15,16 @@
   <div class="nav">
     <h2 class="title"> Ragnakode </h2>
   </div>
-  <div class="editor-container">
-    <textarea id="editor"> ragna: STR 1000 </textarea>
+  <div>
+    <div class="editor-container">
+      <textarea id="editor">ragna: STR 1000</textarea>
+    </div>
+    <button onclick="compileAndRun()">Compile and Run</button>
   </div>
 
   <script src="main.js"></script>
   <script>
-    CodeMirror.fromTextArea(document.getElementById("editor"), {
-      lineNumbers: true,
-      mode: 'ragnakode',
-      lineWrapping: true
-    })
+    
   </script>
 </body>
 </html>
