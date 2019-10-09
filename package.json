@@ -1,0 +1,26 @@
+{
+  "name": "ragnakode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarioMatheus/ragnakode.git"
+  },
+  "author": "Mario Matheus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarioMatheus/ragnakode/issues"
+  },
+  "homepage": "https://github.com/MarioMatheus/ragnakode#readme",
+  "devDependencies": {
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9"
+  }
+}
