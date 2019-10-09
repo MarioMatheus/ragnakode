@@ -1,31 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="lib/codemirror.js"></script>
-  <link rel="stylesheet" href="lib/codemirror.css">
-  <link rel="stylesheet" href="lib/main.css">
-  <script src="addon/mode/simple.js"></script>
-  <script src="mode/ragnakode/ragnakode.js"></script>
-  <title> Ragnakode Compiler </title>
-</head>
-<body>
+<html lang = "en">
+  <head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
 
-  <div class="nav">
-    <h2 class="title"> Ragnakode </h2>
-  </div>
-  <div class="editor-container">
-    <textarea id="editor"> ragna: STR 1000 </textarea>
-  </div>
+    <link rel = "stylesheet" href = "lib/codemirror.css">
+    <link rel = "stylesheet" href = "lib/main.css">
 
-  <script src="main.js"></script>
-  <script>
-    CodeMirror.fromTextArea(document.getElementById("editor"), {
-      lineNumbers: true,
-      mode: 'ragnakode',
-      lineWrapping: true
-    })
-  </script>
-</body>
+    <script src = "lib/codemirror.js"> </script>
+    <script src = "addon/mode/simple.js"> </script>
+    <script src = "mode/ragnakode/ragnakode.js"> </script>
+
+    <title> Ragnakode Compiler </title>
+  </head>
+
+  <body>
+    <div class = "Header">
+      <h2 class = "title"> RAGNAKODE </h2>
+    </div>
+
+    <div class = "editor-container">
+      <textarea id = "editor"> Ragna: STR 1000 </textarea>
+    </div>
+
+    <script src = "main.js"> </script>
+    <script>
+      CodeMirror.fromTextArea(document.getElementById("editor"), {
+        mode: 'ragnakode',
+        lineNumbers: true,
+        lineWrapping: true
+      })
+    </script>
+  </body>
 </html>
