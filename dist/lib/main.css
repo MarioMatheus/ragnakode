@@ -63,7 +63,7 @@ body {
   grid-column: 2;
   position: relative;
   margin: 0 0 16px 16px;
-  box-shadow: 0 0 16px rgba(0, 0, 0, 0.64);
+  /* box-shadow: 0 0 16px rgba(0, 0, 0, 0.64); */
   z-index: inherit;
 }
 
@@ -142,5 +142,27 @@ body {
   position: absolute;
   top: 16px;
   left: 24px;
+  z-index: inherit;
+}
+
+textarea {
+  background-color: transparent;
+  width: 99%;
+  font-weight: normal;
+  font-size: 20px;
+  font-family: monospace;
+  color: white;
+  border: none;
+  outline: none;
+  line-height: 18px;
+  direction: ltr;
+  position: absolute;
+  padding: 12px 12px;
+  top: 56px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+  resize: none;
   z-index: inherit;
 }

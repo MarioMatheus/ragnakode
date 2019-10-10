@@ -4,6 +4,7 @@
   /* Set height, width, borders, and global font properties here */
   background-color: white;
   font-family: monospace;
+  font-size: 20px;
   direction: ltr;
   position: absolute;
   top: 56px;
