@@ -1,5 +1,11 @@
+@import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.207/distr/fira_code.css);
+
 body {
   background-color: rgba(56, 56, 64, 1);
+}
+
+p {
+  font-family: 'Fira Code', monospace;
 }
 
 .Header {
@@ -46,6 +52,11 @@ body {
   z-index: inherit;
 }
 
+.AboutContent {
+  margin-left: 12px;
+  color: white;
+}
+
 .EditorContainer {
   background-color: transparent;
   grid-row: 2;
@@ -86,6 +97,11 @@ body {
   margin-right: 0;
   border-radius: 0 24px 0 0;
   z-index: inherit;
+}
+
+.DocumentationContent {
+  margin-left: 12px;
+  color: white;
 }
 
 .HeaderView {
@@ -162,3 +178,13 @@ body {
   left: 24px;
   z-index: inherit;
 }
+
+.Code {
+  background-color: lightgray;
+  padding: 8px;
+}
+
+.Code .Variable { color: #05a; }
+.Code .Points { color: #219; }
+.Code .Command { color: #708; }
+.Code .Number { color: #164; }
