@@ -1,31 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="lib/codemirror.js"></script>
-  <link rel="stylesheet" href="lib/codemirror.css">
-  <link rel="stylesheet" href="lib/main.css">
-  <script src="addon/mode/simple.js"></script>
-  <script src="mode/ragnakode/ragnakode.js"></script>
-  <title> Ragnakode Compiler </title>
-</head>
-<body>
+<html lang = "en">
+  <head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
 
-  <div class="nav">
-    <h2 class="title"> Ragnakode </h2>
-  </div>
-  <div>
-    <div class="editor-container">
-      <textarea id="editor">ragna: STR 1000</textarea>
+    <link rel = "stylesheet" href = "lib/codemirror.css">
+    <link rel = "stylesheet" href = "lib/main.css">
+
+    <script src = "lib/codemirror.js"> </script>
+    <script src = "addon/mode/simple.js"> </script>
+    <script src = "mode/ragnakode/ragnakode.js"> </script>
+
+    <title> RAGNAKODE - Compiler </title>
+  </head>
+
+  <body>
+    <div class = "Header">
+      <div class = "MainText"> RAGNAKODE </div>
+      <div class = "SeparatorView"></div> 
     </div>
-    <button onclick="compileAndRun()">Compile and Run</button>
-    <textarea id="console" disabled></textarea>
-  </div>
 
-  <script src="main.js"></script>
-  <script>
-    
-  </script>
-</body>
+    <div class = "MainContainer">
+      <div class = "AboutContainer">
+        <div class = "AboutHeaderView">
+          <div class = "MainText"> ABOUT </div>
+          <div class = "SeparatorView"></div>
+        </div>
+      </div>
+
+      <div class = "EditorContainer">
+        <div class = "HeaderView">
+          <div class = "MainText"> EDITOR </div>
+          <button
+            class = "Button"
+            style = "vertical-align: middle"
+            onclick = "compileAndRun()"
+          >
+            <span> Run </span>
+          </button>
+          <div class = "SeparatorView"></div>
+        </div>
+
+        <textarea id = "editor"> Ragnarok 2019 </textarea>
+      </div>
+
+      <div class = "ConsoleContainer">
+        <div class = "HeaderView">
+          <div class = "MainText"> CONSOLE </div>
+          <div class = "SeparatorView"></div>
+        </div>
+        <textarea id = "console"></textarea>
+      </div>
+
+      <div class = "DocumentationContainer">
+        <div class = "DocumentationHeaderView">
+          <div class = "MainText"> DOCUMENTATION </div>
+          <div class = "SeparatorView"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src = "main.js"> </script>
+  </body>
 </html>
