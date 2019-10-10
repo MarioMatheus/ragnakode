@@ -2,7 +2,7 @@
 
 .CodeMirror {
   /* Set height, width, borders, and global font properties here */
-  background-color: rgba(168, 168, 176, 1);
+  background-color: white;
   font-family: monospace;
   direction: ltr;
   position: absolute;
@@ -30,8 +30,8 @@
 /* GUTTER */
 
 .CodeMirror-gutters {
-  border-right: 1px solid #ddd;
-  background-color: #f7f7f7;
+  border-right: 1px solid rgba(240, 192, 48, 1);
+  background-color: rgba(48, 48, 48, 1);
   white-space: nowrap;
 }
 .CodeMirror-linenumbers {}
@@ -39,7 +39,7 @@
   padding: 0 3px 0 5px;
   min-width: 20px;
   text-align: right;
-  color: #999;
+  color: rgba(240, 192, 48, 1);
   white-space: nowrap;
 }
 
@@ -49,7 +49,7 @@
 /* CURSOR */
 
 .CodeMirror-cursor {
-  border-left: 1px solid black;
+  border-left: 1px solid rgba(240, 192, 48, 1);
   border-right: none;
   width: 0;
 }
