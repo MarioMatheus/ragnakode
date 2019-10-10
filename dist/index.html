@@ -34,6 +34,7 @@
           <button
             class = "Button"
             style = "vertical-align: middle"
+            onclick = "compileAndRun()"
           >
             <span> Run </span>
           </button>
@@ -48,6 +49,7 @@
           <div class = "MainText"> CONSOLE </div>
           <div class = "SeparatorView"></div>
         </div>
+        <textarea id = "console"></textarea>
       </div>
 
       <div class = "DocumentationContainer">
@@ -59,12 +61,5 @@
     </div>
 
     <script src = "main.js"> </script>
-    <script>
-      CodeMirror.fromTextArea(document.getElementById("editor"), {
-        mode: 'ragnakode',
-        lineNumbers: true,
-        lineWrapping: true
-      })
-    </script>
   </body>
 </html>

@@ -6,8 +6,8 @@ function parse(tokens) {
   let commandIndex = 0
 
   for (let i = 0; i < tokens.length;) {
-    if (tokens[i].tokenPattern.type !== LANG_TOKENS.identifier.type) throw 'Expected a variable name'
-    if (tokens[i + 1].tokenPattern.type !== LANG_TOKENS.points.type) throw 'Expected two points character'
+    if (tokens[i].tokenPattern.type !== LANG_TOKENS.identifier.type) throw `Error at instruction ${commandIndex + 1}: Expected a variable name`
+    if (tokens[i + 1].tokenPattern.type !== LANG_TOKENS.points.type) throw `Error at instruction ${commandIndex + 1}: Expected two points character`
 
     const command = tokens[i + 2]
     if (command.tokenPattern.type === LANG_TOKENS.str.type) {
@@ -34,7 +34,7 @@ function parse(tokens) {
       symbolTable.push(symbol)
       i += 5
     } else {
-      throw 'Unexpected command'
+      throw `Error at instruction ${commandIndex + 1}: Unexpected command`
     }
   }
   
@@ -44,8 +44,8 @@ function parse(tokens) {
 function parseStr(tokens, symbolTable, commandIndex) {
   const identifier = tokens[0]
   const value = tokens[1]
-  if (identifier.tokenPattern.type !== LANG_TOKENS.identifier.type) throw 'Expected an identifier'
-  if (value.tokenPattern.type !== LANG_TOKENS.number.type) throw 'Expected a number'
+  if (identifier.tokenPattern.type !== LANG_TOKENS.identifier.type) throw `Error at instruction ${commandIndex + 1}: Expected an variable`
+  if (value.tokenPattern.type !== LANG_TOKENS.number.type) throw `Error at instruction ${commandIndex + 1}: Expected a number`
 
   const symbol = symbolTable.map(s => s.identifier.value).includes(identifier.value) ?
     { identifier, value, production: 'assignment', commandIndex } :
@@ -56,7 +56,7 @@ function parseStr(tokens, symbolTable, commandIndex) {
 
 function parsePrt(tokens, symbolTable, commandIndex) {
   const identifier = tokens[0]
-  if (identifier.tokenPattern.type !== LANG_TOKENS.identifier.type) throw 'Expected an identifier'
+  if (identifier.tokenPattern.type !== LANG_TOKENS.identifier.type) throw `Error at instruction ${commandIndex + 1}: Expected an variable`
 
   const instruction = { name: 'print', value: { identifier } }
   const symbol = { identifier, production: 'prints', commandIndex }
@@ -68,11 +68,11 @@ function parseOp(tokens, operation, symbolTable, commandIndex) {
   const identifier = tokens[0]
   const value1 = tokens[1]
   const value2 = tokens[2]
-  if (identifier.tokenPattern.type !== LANG_TOKENS.identifier.type) throw 'Expected an identifier'
+  if (identifier.tokenPattern.type !== LANG_TOKENS.identifier.type) throw `Error at instruction ${commandIndex + 1}: Expected an variable`
   if (value1.tokenPattern.type !== LANG_TOKENS.identifier.type &&
-      value1.tokenPattern.type !== LANG_TOKENS.number.type) throw 'Expected identifier or number'
+      value1.tokenPattern.type !== LANG_TOKENS.number.type) throw `Error at instruction ${commandIndex + 1}: Expected variable or number`
   if (value2.tokenPattern.type !== LANG_TOKENS.identifier.type &&
-      value2.tokenPattern.type !== LANG_TOKENS.number.type) throw 'Expected identifier or number'
+      value2.tokenPattern.type !== LANG_TOKENS.number.type) throw `Error at instruction ${commandIndex + 1}: Expected variable or number`
 
   const instruction = { name: 'operation', value: { identifier, operation, value1, value2 } }
   const symbol = symbolTable.map(s => s.identifier.value).includes(identifier.value) ?
