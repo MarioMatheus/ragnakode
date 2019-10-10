@@ -4,6 +4,7 @@
     <meta charset = "UTF-8">
     <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.207/distr/fira_code.css">
     <link rel = "stylesheet" href = "lib/codemirror.css">
     <link rel = "stylesheet" href = "lib/main.css">
 
@@ -17,7 +18,7 @@
   <body>
     <div class = "Header">
       <div class = "MainText"> RAGNAKODE </div>
-      <div class = "SeparatorView"></div> 
+      <div class = "SeparatorView"></div>
     </div>
 
     <div class = "MainContainer">
@@ -25,6 +26,14 @@
         <div class = "AboutHeaderView">
           <div class = "MainText"> ABOUT </div>
           <div class = "SeparatorView"></div>
+        </div>
+        <div class="AboutContent">
+          <p> <b>Ragnakode</b> é uma simples linguagem implementada para fins acadêmicos. </p>
+          <p>
+            Criada para a palestra <i>Desenvolvendo sua primeira linguagem</i> que aborda conteúdos
+            sobre compiladores na <b>Weekomp II</b>, a Semana da Computação do IFCE,
+            evento com foco em Engenharia de Computação que ocorre todo ano no Instituto Federal do Ceará.
+          </p>
         </div>
       </div>
 
@@ -56,6 +65,39 @@
         <div class = "DocumentationHeaderView">
           <div class = "MainText"> DOCUMENTATION </div>
           <div class = "SeparatorView"></div>
+        </div>
+        <div class="DocumentationContent">
+          <h2>Geral</h2>
+          <p>
+            A linguagem é um pseudo-assembly capado com regras bem simples,
+            operações com números como armazenar, imprimir e operações de artiméricas básicas 
+            são realizadas em torno de um 'Registrador'.
+          </p>
+          <br>
+          <h2>Armazenando</h2>
+          <p> Para armazenar números utiliza-se o comando <b style="color: lightcoral;">STR</b>: </p>
+          <p class="Code"> 
+            <span class="Variable">ragna</span> 
+            <span class="Points">:</span>
+            <span class="Command">STR</span>
+            <span class="Number">500</span>
+          </p>
+          <h2>Printando</h2>
+          <p> Para imprimir números utiliza-se o comando <b style="color: lightcoral;">PRT</b>: </p>
+          <p class="Code"> 
+            <span class="Variable">ragna</span> 
+            <span class="Points">:</span>
+            <span class="Command">PRT</span>
+          </p>
+          <h2>Operando</h2>
+          <p> Para operações artiméricas básicas <b style="color: lightcoral;">SUM SUB MUL DIV</b>: </p>
+          <p class="Code"> 
+            <span class="Variable">ragna</span> 
+            <span class="Points">:</span>
+            <span class="Command">DIV</span>
+            <span class="Number">500</span>
+            <span class="Number">2</span>
+          </p>
         </div>
       </div>
     </div>
