@@ -18,19 +18,31 @@
   <body>
     <div class = "Header">
       <div class = "MainText"> RAGNAKODE </div>
+
+      <a href = "https://github.com/MarioMatheus/Ragnakode">
+        <div class = "HeaderOctocat"></div>
+      </a>
+
       <div class = "SeparatorView"></div>
     </div>
 
     <div class = "MainContainer">
       <div class = "AboutContainer">
         <div class = "AboutHeaderView">
-          <div class = "MainText"> ABOUT </div>
+          <div class = "MainText"> SOBRE </div>
           <div class = "SeparatorView"></div>
         </div>
-        <div class="AboutContent">
-          <p> <b>Ragnakode</b> é uma simples linguagem implementada para fins acadêmicos. </p>
+
+        <div
+          class = "AboutContent"
+          style = "
+            overflow-y: auto;
+            bottom: 0;
+          "
+        >
+          <p> <b>RAGNAKODE</b> é uma simples linguagem implementada para fins acadêmicos. </p>
           <p>
-            Criada para a palestra <i>Desenvolvendo sua primeira linguagem</i> que aborda conteúdos
+            Criada para a palestra <i>Desenvolvendo sua Primeira Linguagem</i> que aborda conteúdos
             sobre compiladores na <b>Weekomp II</b>, a Semana da Computação do IFCE,
             evento com foco em Engenharia de Computação que ocorre todo ano no Instituto Federal do Ceará.
           </p>
@@ -42,7 +54,6 @@
           <div class = "MainText"> EDITOR </div>
           <button
             class = "Button"
-            style = "vertical-align: middle"
             onclick = "compileAndRun()"
           >
             <span> Run </span>
@@ -50,7 +61,7 @@
           <div class = "SeparatorView"></div>
         </div>
 
-        <textarea id = "editor"> Ragnarok 2019 </textarea>
+        <textarea id = "editor"> Ragna : STR 500 </textarea>
       </div>
 
       <div class = "ConsoleContainer">
@@ -58,45 +69,57 @@
           <div class = "MainText"> CONSOLE </div>
           <div class = "SeparatorView"></div>
         </div>
-        <textarea id = "console"></textarea>
+
+        <div class = "ConsoleWaterMark"></div>
+        <textarea readonly id = "console"></textarea>
       </div>
 
       <div class = "DocumentationContainer">
         <div class = "DocumentationHeaderView">
-          <div class = "MainText"> DOCUMENTATION </div>
+          <div class = "MainText"> DOCUMENTAÇÃO </div>
           <div class = "SeparatorView"></div>
         </div>
-        <div class="DocumentationContent">
-          <h2>Geral</h2>
+
+        <div
+          class = "DocumentationContent"
+          style = "
+            overflow-y: auto;
+            bottom: 0;
+            border-radius: 0 0 24px 24px;
+          "
+          >
+          <h2>GERAL</h2>
           <p>
-            A linguagem é um pseudo-assembly capado com regras bem simples,
-            operações com números como armazenar, imprimir e operações de artiméricas básicas 
+            A linguagem é um pseudo-assembly com regras bem simples,
+            operações com números como: Armazenar, Imprimir e Operações de artiméricas básicas 
             são realizadas em torno de um 'Registrador'.
           </p>
-          <br>
-          <h2>Armazenando</h2>
-          <p> Para armazenar números utiliza-se o comando <b style="color: lightcoral;">STR</b>: </p>
-          <p class="Code"> 
-            <span class="Variable">ragna</span> 
-            <span class="Points">:</span>
-            <span class="Command">STR</span>
-            <span class="Number">500</span>
+
+          <h2>ARMAZENANDO</h2>
+          <p> Para armazenar números utiliza-se <b style = "color: lightcoral">STR</b>: </p>
+          <p class = "Code"> 
+            <span class = "Variable">Ragna</span> 
+            <span class = "Points">:</span>
+            <span class = "Command">STR</span>
+            <span class = "Number">500</span>
           </p>
-          <h2>Printando</h2>
-          <p> Para imprimir números utiliza-se o comando <b style="color: lightcoral;">PRT</b>: </p>
-          <p class="Code"> 
-            <span class="Variable">ragna</span> 
-            <span class="Points">:</span>
-            <span class="Command">PRT</span>
+
+          <h2>PRINTANDO</h2>
+          <p> Para imprimir números utiliza-se <b style = "color: lightcoral">PRT</b>: </p>
+          <p class = "Code"> 
+            <span class = "Variable">Ragna</span> 
+            <span class = "Points">:</span>
+            <span class = "Command">PRT</span>
           </p>
-          <h2>Operando</h2>
-          <p> Para operações artiméricas básicas <b style="color: lightcoral;">SUM SUB MUL DIV</b>: </p>
-          <p class="Code"> 
-            <span class="Variable">ragna</span> 
-            <span class="Points">:</span>
-            <span class="Command">DIV</span>
-            <span class="Number">500</span>
-            <span class="Number">2</span>
+
+          <h2>OPERANDO</h2>
+          <p> Operações artiméricas básicas <b style = "color: lightcoral">SUM SUB MUL DIV</b>: </p>
+          <p class = "Code"> 
+            <span class = "Variable">Ragna</span> 
+            <span class = "Points">:</span>
+            <span class = "Command">DIV</span>
+            <span class = "Number">500</span>
+            <span class = "Number">2</span>
           </p>
         </div>
       </div>

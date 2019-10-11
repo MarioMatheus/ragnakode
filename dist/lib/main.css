@@ -1,15 +1,31 @@
 @import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.207/distr/fira_code.css);
 
 body {
-  background-color: rgba(56, 56, 64, 1);
+  background-color: rgba(56, 56, 56, 1);
+}
+
+b {
+  font-weight: bold;
+  font-size: 18px;
+  font-family: 'Fira Code', monospace;
+  color: rgba(240, 192, 48, 1);
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 22px;
+  font-family: 'Fira Code', monospace;
+  color:rgba(240, 192, 48, 1);
 }
 
 p {
+  font-weight: normal;
+  font-size: 18px;
   font-family: 'Fira Code', monospace;
 }
 
 .Header {
-  background-color: rgba(24, 24, 32, 1);
+  background-color: rgba(24, 24, 24, 1);
   width: 100vw;
   height: 56px;
   position: fixed;
@@ -18,43 +34,65 @@ p {
   z-index: 100;
 }
 
+.Header .MainText {
+  color: rgba(240, 192, 48, 1);
+}
+
+.HeaderOctocat {
+  background-image: url(../../resources/octocat-logo.png);
+  background-size: 40px;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 8px;
+  right: 24px;
+  z-index: inherit;
+}
+
 .MainContainer {
   background-color: transparent;
   width: 100vw;
   height: 100vh;
   display: grid;
-  grid-template-rows: auto auto;
-  grid-template-columns: auto auto auto;
+  grid-template-rows: 360px auto;
+  grid-template-columns: auto 472px auto;
   position: absolute;
   top: 0;
-  left: 0;
+  margin-left: 0;
+  margin-right: 0;
   z-index: 0;
 }
 
 .AboutContainer {
-  background-color: rgba(80, 80, 96, 1);
+  background-color: rgba(80, 80, 80, 1);
   grid-row: 1;
   grid-column: 1 / 3;
   position: relative;
   margin: 72px 0 16px 16px;
-  border-radius: 24px 0 0 0;
+  border-radius: 24px 24px 0 0;
   box-shadow: 0 0 16px rgba(0, 0, 0, 0.64);
   z-index: inherit;
 }
 
 .AboutHeaderView {
-  background-color: rgba(24, 24, 32, 1);
+  background-color: rgba(24, 24, 24, 1);
   height: 56px;
   position: relative;
   margin-left: 0;
   margin-right: 0;
-  border-radius: 24px 0 0 0;
+  border-radius: 24px 24px 0 0;
   z-index: inherit;
 }
 
 .AboutContent {
-  margin-left: 12px;
+  background-color: transparent;
+  top: 56px;
+  padding-top: 0;
+  padding-left: 16px;
+  padding-bottom: 0;
+  padding-right: 16px;
   color: white;
+  position: absolute;
 }
 
 .EditorContainer {
@@ -63,49 +101,70 @@ p {
   grid-column: 1;
   position: relative;
   margin: 0 0 16px 16px;
-  border-radius: 0 0 0 24px;
+  border-radius: 0 0 24px 24px;
   box-shadow: 0 0 16px rgba(0, 0, 0, 0.64);
   z-index: inherit;
 }
 
 .ConsoleContainer {
-  background-color: rgba(40, 40, 48, 1);
+  background-color: rgba(40, 40, 56, 1);
   grid-row: 2;
   grid-column: 2;
   position: relative;
   margin: 0 0 16px 16px;
+  border-radius: 0 0 24px 24px;
   box-shadow: 0 0 16px rgba(0, 0, 0, 0.64);
   z-index: inherit;
 }
 
+.ConsoleWaterMark {
+  background-image: url(../../resources/ragnakode-fenrir.png);
+  background-size: 216px 342px;
+  opacity: 0.16;
+  width: 216px;
+  height: 342px;
+  position: relative;
+  display: block;
+  top: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: inherit;
+}
+
 .DocumentationContainer {
-  background-color: rgba(80, 80, 96, 1);
+  background-color: rgba(80, 80, 80, 1);
   grid-row: 1 / 3;
   grid-column: 3;
   position: relative;
   margin: 72px 16px 16px 16px;
-  border-radius: 0 24px 24px 0;
+  border-radius: 24px;
   box-shadow: 0 0 16px rgba(0, 0, 0, 0.64);
   z-index: inherit;
 }
 
 .DocumentationHeaderView {
-  background-color: rgba(24, 24, 32, 1);
+  background-color: rgba(24, 24, 24, 1);
   height: 56px;
   position: relative;
   margin-left: 0;
   margin-right: 0;
-  border-radius: 0 24px 0 0;
+  border-radius: 24px 24px 0 0;
   z-index: inherit;
 }
 
 .DocumentationContent {
-  margin-left: 12px;
+  background-color: transparent;
+  top: 56px;
+  padding-top: 0;
+  padding-left: 16px;
+  padding-bottom: 0;
+  padding-right: 16px;
   color: white;
+  position: absolute;
 }
 
 .HeaderView {
-  background-color: rgba(24, 24, 32, 1);
+  background-color: rgba(24, 24, 24, 1);
   height: 56px;
   position: relative;
   margin-left: 0;
@@ -118,43 +177,27 @@ p {
   width: 64px;
   height: 24px;
   color: white;
-  font-weight: bold;
-  font-size: 16px;
+  font-weight: normal;
+  font-size: 18px;
   font-family: 'Times New Roman', Times, serif;
+  text-align: center;
   display: inline-block;
   position: absolute;
   top: 16px;
   right: 24px;
-  border: none;
+  border: 1px solid white;
   border-radius: 4px;
   cursor: pointer;
-  transition: all 0.48s;
+  transition-duration: 0.64s;
+  -webkit-transition-duration: 0.64s;
+  -moz-animation-duration: 0.64s;
+  -o-animation-duration: 0.64s;
   z-index: inherit;
 }
 
-.Button span {
-  display: inline-block;
-  position: relative;
-  cursor: pointer;
-  transition: 0.48s;
-}
-
-.Button span:after {
-  content: ">>";
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -24px;
-  transition: 0.48px;
-}
-
-.Button:hover span {
-  padding-right: 24px;
-}
-
-.Button:hover  span:after {
-  right: 0;
-  opacity: 1';
+.Button:hover {
+  background-color: white;
+  color: rgba(240, 192, 48, 1);
 }
 
 .SeparatorView {
@@ -179,12 +222,93 @@ p {
   z-index: inherit;
 }
 
+textarea {
+  background-color: transparent;
+  width: 93%;
+  font-weight: normal;
+  font-size: 20px;
+  font-family: 'Fira Code', monospace;
+  color: white;
+  border: none;
+  border-radius: 0 0 24px 24px;
+  outline: none;
+  line-height: 18px;
+  direction: ltr;
+  position: absolute;
+  padding: 16px;
+  top: 56px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+  resize: none;
+  z-index: inherit;
+}
+
 .Code {
-  background-color: lightgray;
-  padding: 8px;
+  background-color: white;
+  border: 1px solid rgba(240, 192, 48, 1);
+  border-radius: 8px;
+  padding-top: 8px;
+  padding-left: 16px;
+  padding-bottom: 8px;
+  padding-right: 16px;
 }
 
 .Code .Variable { color: #05a; }
 .Code .Points { color: #219; }
 .Code .Command { color: #708; }
 .Code .Number { color: #164; }
+
+@media (max-width: 1080px) {
+  .MainContainer {
+    height: auto;
+    grid-template-rows: 416px 320px 352px 744px;
+    grid-template-columns: auto;
+  }
+
+  .AboutContainer {
+    grid-row: 1;
+    grid-column: 1;
+    margin: 72px 16px 16px 16px;
+  }
+
+  .EditorContainer {
+    grid-row: 2;
+    grid-column: 1;
+    margin: 0 16px 16px 16px;
+  }
+
+  .ConsoleContainer {
+    grid-row: 3;
+    grid-column: 1;
+    margin: 0 16px 16px 16px;
+    border-radius: 24px 24px 0 0;
+  }
+
+  .ConsoleWaterMark {
+    background-size: 180px 285px;
+    width: 180px;
+    height: 285px;
+    top: 8px;
+  }
+
+  .ConsoleContainer .HeaderView {
+    border-radius: 24px 24px 0 0;
+  }
+
+  .ConsoleContainer textarea {
+    border-radius: 0;
+  }
+
+  .DocumentationContainer {
+    grid-row: 4;
+    grid-column: 1;
+    margin: 0 16px 16px 16px;
+    border-radius: 0 0 24px 24px;
+  }
+
+  .DocumentationHeaderView {
+    border-radius: 0;
+  }
+}
