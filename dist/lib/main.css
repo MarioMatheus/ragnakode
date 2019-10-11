@@ -34,13 +34,24 @@ p {
   z-index: 100;
 }
 
+.HeaderOctocat {
+  background-image: url(../../resources/octocat-logo.png);
+  background-size: 40px;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 8px;
+  right: 24px;
+  z-index: inherit;
+}
+
 .MainContainer {
   background-color: transparent;
   width: 100vw;
   height: 100vh;
   display: grid;
   grid-template-rows: 360px auto;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto 472px auto;
   position: absolute;
   top: 0;
   margin-left: 0;
@@ -99,6 +110,20 @@ p {
   margin: 0 0 16px 16px;
   border-radius: 0 0 24px 24px;
   box-shadow: 0 0 16px rgba(0, 0, 0, 0.64);
+  z-index: inherit;
+}
+
+.ConsoleWaterMark {
+  background-image: url(../../resources/ragnakode-fenrir.png);
+  background-size: 216px 342px;
+  opacity: 0.16;
+  width: 216px;
+  height: 342px;
+  position: relative;
+  display: block;
+  top: 24px;
+  margin-left: auto;
+  margin-right: auto;
   z-index: inherit;
 }
 
@@ -229,10 +254,10 @@ textarea {
 .Code .Command { color: #708; }
 .Code .Number { color: #164; }
 
-@media (max-width: 900px) {
+@media (max-width: 1080px) {
   .MainContainer {
     height: auto;
-    grid-template-rows: 416px 308px 308px 748px;
+    grid-template-rows: 416px 320px 352px 744px;
     grid-template-columns: auto;
   }
 
@@ -253,6 +278,13 @@ textarea {
     grid-column: 1;
     margin: 0 16px 16px 16px;
     border-radius: 24px 24px 0 0;
+  }
+
+  .ConsoleWaterMark {
+    background-size: 180px 285px;
+    width: 180px;
+    height: 285px;
+    top: 8px;
   }
 
   .ConsoleContainer .HeaderView {
