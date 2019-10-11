@@ -13,7 +13,7 @@
   left: 0;
   bottom: 0;
   right: 0;
-  border-radius: 0 0 0 24px;
+  border-radius: 0 0 24px 24px;
   overflow: hidden;
 }
 
