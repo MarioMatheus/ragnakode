@@ -15,12 +15,11 @@ const editor = CodeMirror.fromTextArea(document.getElementById('editor'), {
   lineWrapping: true
 })
 
-window.compileAndRun = function() {
-  const code = editor.getValue()
+function compile(code) {
   let output = ''
-
   try {
     const tokens = Lexer.tokenize(code)
+    console.oldLog(tokens)
     const { ast, symbolTable } = Parser.parse(tokens)
     SemanticAnalyser.analyze(ast, symbolTable)
     const outputFileData = CodeGenerator.generate(ast, symbolTable)
@@ -29,6 +28,11 @@ window.compileAndRun = function() {
   } catch (error) {
     output = console.log(error)
   }
-  
+  return output
+}
+
+window.compileAndRun = function() {
+  const code = editor.getValue()
+  output = (!code || code.length === 0) ? 'Type something' : compile(code)
   document.querySelector('#console').value = output
 }

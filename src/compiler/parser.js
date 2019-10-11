@@ -7,7 +7,7 @@ function parse(tokens) {
 
   for (let i = 0; i < tokens.length;) {
     if (tokens[i].tokenPattern.type !== LANG_TOKENS.identifier.type) throw `Error at instruction ${commandIndex + 1}: Expected a variable name`
-    if (tokens[i + 1].tokenPattern.type !== LANG_TOKENS.points.type) throw `Error at instruction ${commandIndex + 1}: Expected two points character`
+    if (!tokens[i + 1] || tokens[i + 1].tokenPattern.type !== LANG_TOKENS.points.type) throw `Error at instruction ${commandIndex + 1}: Expected two points character`
 
     const command = tokens[i + 2]
     if (command.tokenPattern.type === LANG_TOKENS.str.type) {
