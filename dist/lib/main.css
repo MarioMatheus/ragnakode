@@ -1,5 +1,27 @@
+@import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.207/distr/fira_code.css);
+
 body {
   background-color: rgba(56, 56, 56, 1);
+}
+
+b {
+  font-weight: bold;
+  font-size: 18px;
+  font-family: 'Fira Code', monospace;
+  color: rgba(240, 192, 48, 1);
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 24px;
+  font-family: 'Fira Code', monospace;
+  color:rgba(240, 192, 48, 1);
+}
+
+p {
+  font-weight: normal;
+  font-size: 18px;
+  font-family: 'Fira Code', monospace;
 }
 
 .Header {
@@ -17,11 +39,12 @@ body {
   width: 100vw;
   height: 100vh;
   display: grid;
-  grid-template-rows: auto auto;
+  grid-template-rows: 360px auto;
   grid-template-columns: auto auto auto;
   position: absolute;
   top: 0;
-  left: 0;
+  margin-left: 0;
+  margin-right: 0;
   z-index: 0;
 }
 
@@ -46,6 +69,17 @@ body {
   z-index: inherit;
 }
 
+.AboutContent {
+  background-color: transparent;
+  top: 56px;
+  padding-top: 0;
+  padding-left: 16px;
+  padding-bottom: 0;
+  padding-right: 16px;
+  color: white;
+  position: absolute;
+}
+
 .EditorContainer {
   background-color: transparent;
   grid-row: 2;
@@ -63,7 +97,7 @@ body {
   grid-column: 2;
   position: relative;
   margin: 0 0 16px 16px;
-  /* box-shadow: 0 0 16px rgba(0, 0, 0, 0.64); */
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.64);
   z-index: inherit;
 }
 
@@ -86,6 +120,17 @@ body {
   margin-right: 0;
   border-radius: 0 24px 0 0;
   z-index: inherit;
+}
+
+.DocumentationContent {
+  background-color: transparent;
+  top: 56px;
+  padding-top: 0;
+  padding-left: 16px;
+  padding-bottom: 0;
+  padding-right: 16px;
+  color: white;
+  position: absolute;
 }
 
 .HeaderView {
@@ -150,7 +195,7 @@ textarea {
   width: 99%;
   font-weight: normal;
   font-size: 20px;
-  font-family: monospace;
+  font-family: 'Fira Code', monospace;
   color: white;
   border: none;
   outline: none;
@@ -166,3 +211,18 @@ textarea {
   resize: none;
   z-index: inherit;
 }
+
+.Code {
+  background-color: white;
+  border: 1px solid rgba(240, 192, 48, 1);
+  border-radius: 8px;
+  padding-top: 8px;
+  padding-left: 16px;
+  padding-bottom: 8px;
+  padding-right: 16px;
+}
+
+.Code .Variable { color: #05a; }
+.Code .Points { color: #219; }
+.Code .Command { color: #708; }
+.Code .Number { color: #164; }

@@ -1,9 +1,11 @@
+@import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.207/distr/fira_code.css);
+
 /* BASICS */
 
 .CodeMirror {
   /* Set height, width, borders, and global font properties here */
   background-color: white;
-  font-family: monospace;
+  font-family: 'Fira Code', monospace;
   font-size: 20px;
   direction: ltr;
   position: absolute;
