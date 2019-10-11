@@ -3,6 +3,7 @@
   <head>
     <meta charset = "UTF-8">
     <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+    <link rel="icon" href="../resources/logo.png" type="image/x-icon" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.207/distr/fira_code.css">
     <link rel = "stylesheet" href = "lib/codemirror.css">
@@ -61,7 +62,7 @@
           <div class = "SeparatorView"></div>
         </div>
 
-        <textarea id = "editor"> Ragna : STR 500 </textarea>
+        <textarea id = "editor"> Ragna: STR 500 </textarea>
       </div>
 
       <div class = "ConsoleContainer">
@@ -94,26 +95,44 @@
             operações com números como: Armazenar, Imprimir e Operações de artiméricas básicas 
             são realizadas em torno de um 'Registrador'.
           </p>
+          <p>
+            Toda instrução em Ragnakode segue a mesma sintaxe: 
+            <p class = "Code"> 
+              <span class = "Variable">Variável</span> 
+              <span class = "Points">:</span>
+              <span class = "Command">COMMANDO</span>
+              <span class = "Number">ARGS</span>
+            </p>
+            <p> Onde o resultado dos comandos com seus argumentos são executados sobre a variável. </p>
+          </p>
+          <br>
 
           <h2>ARMAZENANDO</h2>
-          <p> Para armazenar números utiliza-se <b style = "color: lightcoral">STR</b>: </p>
+          <p> 
+            Para armazenar números utiliza-se o comando 
+            <b style = "color: lightcoral">STR</b>, 
+            seguido do número que pode ser inteiro ou real: </p>
           <p class = "Code"> 
-            <span class = "Variable">Ragna</span> 
+            <span class = "Variable">Ragna</span>
             <span class = "Points">:</span>
             <span class = "Command">STR</span>
             <span class = "Number">500</span>
           </p>
+          <p> No exemplo acima, o número 500 é atríbuido a variável Ragna. </p>
+          <br>
 
           <h2>PRINTANDO</h2>
-          <p> Para imprimir números utiliza-se <b style = "color: lightcoral">PRT</b>: </p>
+          <p> Para imprimir váriaveis utiliza-se <b style = "color: lightcoral">PRT</b>: </p>
           <p class = "Code"> 
             <span class = "Variable">Ragna</span> 
             <span class = "Points">:</span>
             <span class = "Command">PRT</span>
           </p>
+          <p> Aqui, é escrito no console o conteúdo da variável Ragna. </p>
+          <br>
 
           <h2>OPERANDO</h2>
-          <p> Operações artiméricas básicas <b style = "color: lightcoral">SUM SUB MUL DIV</b>: </p>
+          <p> Para executar operações artiméricas básicas, existem os comandos <b style = "color: lightcoral">SUM SUB MUL DIV</b>: </p>
           <p class = "Code"> 
             <span class = "Variable">Ragna</span> 
             <span class = "Points">:</span>
@@ -121,6 +140,12 @@
             <span class = "Number">500</span>
             <span class = "Number">2</span>
           </p>
+          <p> 
+            Note que essas operações devem possuir os dois argumentos correspondente a operação.
+            Depois de computada a operação o resultado é armazenado na variável Ragna.
+          </p>
+          <br>
+          
         </div>
       </div>
     </div>
