@@ -118,7 +118,7 @@ p {
 }
 
 .ConsoleWaterMark {
-  background-image: url(../../resources/ragnakode-fenrir.png);
+  background-image: url(../resources/ragnakode-fenrir.png);
   background-size: 216px 342px;
   opacity: 0.16;
   width: 216px;
