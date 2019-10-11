@@ -34,6 +34,10 @@ p {
   z-index: 100;
 }
 
+.Header .MainText {
+  color: rgba(240, 192, 48, 1);
+}
+
 .HeaderOctocat {
   background-image: url(../../resources/octocat-logo.png);
   background-size: 40px;
@@ -174,7 +178,7 @@ p {
   height: 24px;
   color: white;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 18px;
   font-family: 'Times New Roman', Times, serif;
   text-align: center;
   display: inline-block;
@@ -184,8 +188,10 @@ p {
   border: 1px solid white;
   border-radius: 4px;
   cursor: pointer;
-  transition-duration: 0.4s;
-  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.64s;
+  -webkit-transition-duration: 0.64s;
+  -moz-animation-duration: 0.64s;
+  -o-animation-duration: 0.64s;
   z-index: inherit;
 }
 
